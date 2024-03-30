@@ -50,8 +50,9 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yaricap) {
+  CemberinCevresi = 2 * pi * yaricap;
+  return CemberinCevresi;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -64,8 +65,9 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yaricap, pi) {
+  CemberinAlani = pi * yaricap * yaricap;
+  return CemberinAlani;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -98,8 +100,23 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+function enBuyukVeKucukSayilariBul(sayilar) {
+  enkucuk = sayilar[0];
+  enbuyuk = sayilar[0];
+    for (let i = 1; i < sayilar.length; i++) {
+      if (sayilar[i] > enbuyuk) {
+        enbuyuk = sayilar[i];
+      }
 
-/* kodlar buraya */
+      if (sayilar[i] < enkucuk) {
+        enkucuk = sayilar[i];
+      }
+    }
+  return {
+    enbuyuk,
+    enkucuk
+  };
+}
 
 // 3b çözümü:
 
